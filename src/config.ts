@@ -37,7 +37,7 @@ export const SIDEBAR = {
 		{ text: 'Products', link: 'doc/products' },
 		{ text: 'Categories', link: 'doc/categories' },
 		{ text: 'Users', link: 'doc/users' },
-		{ text: 'Auth JWT', link: 'doc/auth' },
+		{ text: 'Auth JWT', link: 'doc/auth-jwt' },
 		{ text: 'Files', link: 'doc/files' },
     { text: 'Resources', header: true },
 		{ text: 'Insomnia', link: 'doc/insomnia' },
