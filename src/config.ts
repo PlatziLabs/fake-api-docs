@@ -33,14 +33,14 @@ export const GITHUB_EDIT_URL = `https://github.com/PlatziMaster/fake-store-site/
 export const SIDEBAR = {
 	doc: [
 		{ text: 'Documentation', header: true },
-		{ text: 'Introduction', link: 'en/introduction' },
-		{ text: 'Products', link: 'en/products' },
-		{ text: 'Categories', link: 'en/categories' },
-		{ text: 'Users', link: 'en/users' },
-		{ text: 'Auth JWT', link: 'en/auth' },
-		{ text: 'Files', link: 'en/files' },
+		{ text: 'Introduction', link: 'doc/introduction' },
+		{ text: 'Products', link: 'doc/products' },
+		{ text: 'Categories', link: 'doc/categories' },
+		{ text: 'Users', link: 'doc/users' },
+		{ text: 'Auth JWT', link: 'doc/auth' },
+		{ text: 'Files', link: 'doc/files' },
     { text: 'Resources', header: true },
-		{ text: 'Insomnia', link: 'en/insomnia' },
+		{ text: 'Insomnia', link: 'doc/insomnia' },
 		{ text: 'Swagger Docs', link: 'https://api.escuelajs.co/docs', external: true },
 	],
   es: [
