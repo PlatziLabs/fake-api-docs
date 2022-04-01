@@ -1,6 +1,101 @@
-<!-- <script>
-	// Redirect your homepage to the first page of documentation.
-	// If you have a landing page, remove this script and add it here!
-	window.location.pathname = `/doc/introduction`;
-</script> -->
-<h1>Hello</h1>
+---
+import { Markdown } from 'astro/components';
+import HomeLayout from '../layouts/HomeLayout.astro';
+import PlatziLogo from '../components/Header/PlatziLogo.astro';
+import ProductsAPI from '../components/ProductsAPI/ProductsAPI.tsx';
+import CategoriesAPI from '../components/CategoriesAPI/CategoriesAPI.tsx';
+---
+<HomeLayout>
+  <section class="hero">
+    <div>
+      <div class="title">
+        <PlatziLogo size={60} />
+        <h1>Platzi Fake Store API</h1>
+      </div>
+
+      <p>Fake store rest API for your e-commerce or shopping website prototype.</p>
+      <a class="btn" href="/doc/introduction">View Docs</a>
+    </div>
+    <img src="/img-1.png" alt="hero">
+  </section>
+  <section class="example">
+    <div class="title">
+      <h2>Get products</h2>
+      <Markdown>
+        ```
+        [GET] http://api.escuelajs.co/api/v1/products
+        ```
+      </Markdown>
+    </div>
+    <div>
+      <ProductsAPI url="http://api.escuelajs.co/api/v1/products?offset=0&limit=18" client:visible  />
+    </div>
+  </section>
+  <section class="example">
+    <div class="title">
+      <h2>Get categories</h2>
+      <Markdown>
+        ```
+        [GET] http://api.escuelajs.co/api/v1/categories
+        ```
+      </Markdown>
+    </div>
+    <div>
+      <CategoriesAPI url="http://api.escuelajs.co/api/v1/categories" client:visible  />
+    </div>
+  </section>
+</HomeLayout>
+<style>
+  .btn {
+    background: #121f3d;
+    border: 1px solid #33b1ff;
+    border-radius: 0.5rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #33b1ff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    justify-content: space-between;
+  }
+   .hero .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+   .hero .title h1 {
+    margin-bottom: 0;
+    margin-left: .5rem;
+  }
+
+
+
+  .example {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .example .title {
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  img {
+    width: 45%;
+    margin: 1rem;
+  }
+</style>

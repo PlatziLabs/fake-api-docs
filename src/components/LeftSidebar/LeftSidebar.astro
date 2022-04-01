@@ -31,7 +31,7 @@ const sidebarSections = SIDEBAR[langCode].reduce((col, item, i) => {
 					<ul>
 						{section.children.map((child) => (
 							<li class="nav-link">
-								<a href={`${Astro.site.pathname}${child.link}`} aria-current={`${currentPageMatch === child.link ? 'page' : 'false'}`}>
+								<a target={child.external ? '_blank' : '_self'} href={child.external ? child.link : `${Astro.site.pathname}${child.link}`} aria-current={`${currentPageMatch === child.link ? 'page' : 'false'}`}>
 									{child.text}
 								</a>
 							</li>

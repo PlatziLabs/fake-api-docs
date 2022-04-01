@@ -17,7 +17,7 @@ export const KNOWN_LANGUAGES = {
 };
 
 // Uncomment this to add an "Edit this page" button to every page of documentation.
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/blob/main/docs/`;
+export const GITHUB_EDIT_URL = `https://github.com/PlatziMaster/fake-store-site/tree/master/src/pages/doc`;
 
 // Uncomment this to add an "Join our Community" button to every page of documentation.
 // export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
@@ -33,15 +33,26 @@ export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/blob/main/doc
 export const SIDEBAR = {
 	doc: [
 		{ text: 'Documentation', header: true },
-		{ text: 'Introduction', link: 'doc/introduction' },
-		{ text: 'Products', link: 'doc/products' },
-		{ text: 'Categories', link: 'doc/categories' },
-		{ text: 'Users', link: 'doc/users' },
-		{ text: 'Auth JWT', link: 'doc/auth' },
-		{ text: 'Files', link: 'doc/files' },
-    { text: 'Resourses', header: true },
-		{ text: 'Postman', link: 'doc/page-3' },
-		{ text: 'Insomia', link: 'doc/page-3' },
-		{ text: 'Swagger Docs', link: 'doc/page-3' },
+		{ text: 'Introduction', link: 'en/introduction' },
+		{ text: 'Products', link: 'en/products' },
+		{ text: 'Categories', link: 'en/categories' },
+		{ text: 'Users', link: 'en/users' },
+		{ text: 'Auth JWT', link: 'en/auth' },
+		{ text: 'Files', link: 'en/files' },
+    { text: 'Resources', header: true },
+		{ text: 'Insomnia', link: 'en/insomnia' },
+		{ text: 'Swagger Docs', link: 'https://api.escuelajs.co/docs', external: true },
+	],
+  es: [
+		{ text: 'Documentation', header: true },
+		{ text: 'Introduction', link: 'en/introduction' },
+		{ text: 'Products', link: 'en/products' },
+		{ text: 'Categories', link: 'en/categories' },
+		{ text: 'Users', link: 'en/users' },
+		{ text: 'Auth JWT', link: 'en/auth' },
+		{ text: 'Files', link: 'en/files' },
+    { text: 'Resources', header: true },
+		{ text: 'Insomnia', link: 'en/insomnia' },
+		{ text: 'Swagger Docs', link: 'https://api.escuelajs.co/docs', external: true },
 	],
 };
