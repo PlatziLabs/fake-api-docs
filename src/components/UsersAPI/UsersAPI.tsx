@@ -1,13 +1,13 @@
 /* jsxImportSource: react */
 import React, { useState, useEffect } from 'react';
-import './CategoriesAPI.css';
+import './UsersAPI.css';
 
-export default function CategoriesAPI() {
+export default function UsersAPI() {
 
   const [items, setItems] = useState([]);
 
   async function fetchAPI() {
-    const response = await fetch('https://api.escuelajs.co/api/v1/categories');
+    const response = await fetch('https://api.escuelajs.co/api/v1/users');
     const data = await response.json();
     setItems(data);
   }
@@ -17,12 +17,12 @@ export default function CategoriesAPI() {
   }, []);
 
 	return (
-		<div className='categories-gallery'>
+		<div className='users-gallery'>
 			{items.map(item => (
         <div>
-          <img src={item.image} alt="category" />
+          <img src={item.avatar} alt="user" />
           <div className='title'>
-            <h5>{item.name}</h5>
+            <h5>{item.email}</h5>
           </div>
         </div>
       ))}

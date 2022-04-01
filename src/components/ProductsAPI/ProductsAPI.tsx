@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import './ProductsAPI.css';
 
-export default function ProductsAPI({url}) {
+export default function ProductsAPI() {
 
   const [products, setProducts] = useState([]);
 
   async function fetchProducts() {
-    const response = await fetch(url);
+    const response = await fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=10');
     const data = await response.json();
     setProducts(data);
   }
@@ -17,10 +17,10 @@ export default function ProductsAPI({url}) {
   }, []);
 
 	return (
-		<div className='gallery'>
+		<div className='prod-gallery'>
 			{products.map(item => (
         <div>
-          <img src={item.images[0]} alt="" />
+          <img src={item.images[0]} alt="product" />
           <div className='title'>
             <h5>{item.title}</h5>
             <p>${item.price}</p>

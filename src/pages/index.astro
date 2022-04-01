@@ -4,13 +4,14 @@ import HomeLayout from '../layouts/HomeLayout.astro';
 import PlatziLogo from '../components/Header/PlatziLogo.astro';
 import ProductsAPI from '../components/ProductsAPI/ProductsAPI.tsx';
 import CategoriesAPI from '../components/CategoriesAPI/CategoriesAPI.tsx';
+import UsersAPI from '../components/UsersAPI/UsersAPI.tsx';
 ---
 <HomeLayout>
   <section class="hero">
     <div>
       <div class="title">
         <PlatziLogo size={60} />
-        <h1>Platzi Fake Store API</h1>
+        <h2>Platzi Fake Store API</h2>
       </div>
 
       <p>Fake store rest API for your e-commerce or shopping website prototype.</p>
@@ -28,7 +29,7 @@ import CategoriesAPI from '../components/CategoriesAPI/CategoriesAPI.tsx';
       </Markdown>
     </div>
     <div>
-      <ProductsAPI url="https://api.escuelajs.co/api/v1/products?offset=0&limit=18" client:visible  />
+      <ProductsAPI client:idle  />
     </div>
   </section>
   <section class="example">
@@ -41,7 +42,20 @@ import CategoriesAPI from '../components/CategoriesAPI/CategoriesAPI.tsx';
       </Markdown>
     </div>
     <div>
-      <CategoriesAPI url="https://api.escuelajs.co/api/v1/categories" client:visible  />
+      <CategoriesAPI client:idle />
+    </div>
+  </section>
+  <section class="example">
+    <div class="title">
+      <h2>Get users</h2>
+      <Markdown>
+        ```
+        [GET] http://api.escuelajs.co/api/v1/users
+        ```
+      </Markdown>
+    </div>
+    <div>
+      <UsersAPI client:idle  />
     </div>
   </section>
 </HomeLayout>
@@ -71,9 +85,11 @@ import CategoriesAPI from '../components/CategoriesAPI/CategoriesAPI.tsx';
    .hero .title {
     display: flex;
     align-items: center;
+    align-content: center;
     margin-bottom: 1rem;
   }
-   .hero .title h1 {
+   .hero .title h2 {
+    margin-top: 0;
     margin-bottom: 0;
     margin-left: .5rem;
   }
