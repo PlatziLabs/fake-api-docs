@@ -155,18 +155,18 @@ For example, for a pagination with 10 items per page, it looks like this:
 ``` -->
 | Request  |  Description |
 | --- | --- |
-| /api/v1/products?**offset=0&limit=10**   | Return the first 10 products. |
-| /api/v1/products?**offset=10&limit=10**   | Return products from 10 to 20 |
-| /api/v1/products?**offset=20&limit=10**   | Return products from 20 to 30 |
+| /products?**offset=0&limit=10**   | Return the first 10 products. |
+| /products?**offset=10&limit=10**   | Return products from 10 to 20 |
+| /products?**offset=20&limit=10**   | Return products from 20 to 30 |
 
 Or for a pagination with 20 items per page, it looks like this:
 
 
 | Request  |  Description |
 | --- | --- |
-| /api/v1/products?**offset=0&limit=20**   | Return the first 20 products. |
-| /api/v1/products?**offset=20&limit=20**   | Return products from 20 to 40 |
-| /api/v1/products?**offset=40&limit=20**   | Return products from 40 to 60 |
+| /products?**offset=0&limit=20**   | Return the first 20 products. |
+| /products?**offset=20&limit=20**   | Return products from 20 to 40 |
+| /products?**offset=40&limit=20**   | Return products from 40 to 60 |
 
 ## Schema Product
 
