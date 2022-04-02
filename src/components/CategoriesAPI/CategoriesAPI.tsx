@@ -18,8 +18,8 @@ export default function CategoriesAPI() {
 
 	return (
 		<div className='categories-gallery'>
-			{items.map(item => (
-        <div>
+			{items.map((item, index) => (
+        <div key={index}>
           <img src={item.image} alt="category" />
           <div className='title'>
             <h5>{item.name}</h5>

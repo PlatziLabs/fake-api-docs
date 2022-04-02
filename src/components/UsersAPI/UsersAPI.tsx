@@ -18,8 +18,8 @@ export default function UsersAPI() {
 
 	return (
 		<div className='users-gallery'>
-			{items.map(item => (
-        <div>
+			{items.map((item, index) => (
+        <div key={index}>
           <img src={item.avatar} alt="user" />
           <div className='title'>
             <h5>{item.email}</h5>
