@@ -18,8 +18,8 @@ export default function ProductsAPI() {
 
 	return (
 		<div className='prod-gallery'>
-			{products.map(item => (
-        <div>
+			{products.map((item, index) => (
+        <div key={index}>
           <img src={item.images[0]} alt="product" />
           <div className='title'>
             <h5>{item.title}</h5>
