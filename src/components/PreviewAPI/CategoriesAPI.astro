@@ -3,8 +3,8 @@ const API = 'https://api.escuelajs.co/api/v1/products?offset=0&limit=10';
 const data = await fetch(API).then(r => r.json());
 ---
 <div class='categories-gallery'>
-	{data.map((item, index) => (
-    <div key={index}>
+	{data.map((item) => (
+    <div>
       <img src={item.image} alt={item.name} />
       <div class='title'>
         <h5>{item.name}</h5>
