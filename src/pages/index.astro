@@ -2,9 +2,9 @@
 import { Markdown } from 'astro/components';
 import HomeLayout from '../layouts/HomeLayout.astro';
 import PlatziLogo from '../components/Header/PlatziLogo.astro';
-import ProductsAPI from '../components/ProductsAPI/ProductsAPI.tsx';
-import CategoriesAPI from '../components/CategoriesAPI/CategoriesAPI.tsx';
-import UsersAPI from '../components/UsersAPI/UsersAPI.tsx';
+import ProductsAPI from '../components/PreviewAPI/ProductsAPI.astro';
+import CategoriesAPI from '../components/PreviewAPI/CategoriesAPI.astro';
+import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
 ---
 <HomeLayout>
   <section class="hero">
@@ -29,7 +29,7 @@ import UsersAPI from '../components/UsersAPI/UsersAPI.tsx';
       </Markdown>
     </div>
     <div>
-      <ProductsAPI client:idle  />
+      <ProductsAPI />
     </div>
   </section>
   <section class="example">
@@ -42,7 +42,7 @@ import UsersAPI from '../components/UsersAPI/UsersAPI.tsx';
       </Markdown>
     </div>
     <div>
-      <CategoriesAPI client:idle />
+      <CategoriesAPI />
     </div>
   </section>
   <section class="example">
@@ -55,7 +55,7 @@ import UsersAPI from '../components/UsersAPI/UsersAPI.tsx';
       </Markdown>
     </div>
     <div>
-      <UsersAPI client:idle  />
+      <UsersAPI />
     </div>
   </section>
 </HomeLayout>

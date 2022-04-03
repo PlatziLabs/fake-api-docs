@@ -1,0 +1,22 @@
+---
+const API = 'https://api.escuelajs.co/api/v1/users';
+const data = await fetch(API).then(r => r.json());
+---
+<div class='users-gallery'>
+	{data.map((item, index) => (
+    <div key={index}>
+      <img src={item.avatar} alt="user" />
+      <div class='title'>
+        <h5>{item.email}</h5>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+	.users-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+</style>
