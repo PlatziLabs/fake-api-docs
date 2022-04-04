@@ -215,7 +215,7 @@ table,
 pre {
 	position: relative;
 	--padding-block: 1rem;
-	--padding-inline: 2rem;
+	--padding-inline: 0.5rem;
 	padding: var(--padding-block) var(--padding-inline);
 	padding-right: calc(var(--padding-inline) * 2);
 	margin-left: calc(var(--padding-inline) * -1);
@@ -385,4 +385,8 @@ h2.heading {
 
 :target {
 	scroll-margin: calc(var(--theme-sidebar-offset, 5rem) + 2rem) 0 2rem;
+}
+
+.APIContainer {
+	inline-size: 100%;
 }
