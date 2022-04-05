@@ -17,7 +17,13 @@ const data = await fetch(API).then(r => r.json());
 <style>
 	.prod-gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .prod-gallery {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
   }
 </style>
