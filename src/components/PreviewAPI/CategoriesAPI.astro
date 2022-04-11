@@ -1,11 +1,12 @@
 ---
+import { WIDTH, HEIGHT } from '../../constants/images.constants.ts'
 const API = 'https://api.escuelajs.co/api/v1/categories';
 const data = await fetch(API).then(r => r.json());
 ---
 <div class='categories-gallery'>
 	{data.map((item) => (
     <div>
-      <img loading="lazy" src={item.image} alt={item.name} />
+      <img width={WIDTH} height={HEIGHT} loading="lazy"src={item.image} alt={item.name} />
       <div class='title'>
         <h5>{item.name}</h5>
       </div>
