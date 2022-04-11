@@ -78,9 +78,14 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
   }
   .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     justify-content: space-between;
+  }
+  .hero > div {
+    display: flex;
+    flex-direction: column;
   }
    .hero .title {
     display: flex;
@@ -92,6 +97,7 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
     margin-top: 0;
     margin-bottom: 0;
     margin-left: .5rem;
+    text-align: center;
   }
 
 
@@ -111,7 +117,22 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
     margin-bottom: 1rem;
   }
   img {
-    width: 45%;
+    width: 90%;
     margin: 1rem;
+    margin-block-end: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    img {
+      width: 45%;
+      margin-block-end: 1rem;
+    }
+    .hero {
+      flex-direction: row;
+      padding: 4rem 2rem;
+    }
+    .hero > div {
+      display: initial;
+    }
   }
 </style>
