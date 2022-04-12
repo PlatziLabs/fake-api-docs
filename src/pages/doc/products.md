@@ -9,7 +9,7 @@ layout: ../../layouts/MainLayout.astro
 You can access the list of 200 products by using the `/products` endpoint.
 
 ```
-[GET] http://api.escuelajs.co/api/v1/products
+[GET] https://api.escuelajs.co/api/v1/products
 ```
 
 ```json
@@ -39,7 +39,7 @@ You can access the list of 200 products by using the `/products` endpoint.
 You can get a single product by adding the `id` as a parameter: `/products/1`
 
 ```bash
-[GET] http://api.escuelajs.co/api/v1/products/1
+[GET] https://api.escuelajs.co/api/v1/products/1
 ```
 
 ```json
@@ -66,7 +66,7 @@ You can get a single product by adding the `id` as a parameter: `/products/1`
 You can create a new product by sending an object like the following to `/products/`
 
 ```bash
-[POST] http://api.escuelajs.co/api/v1/products/
+[POST] https://api.escuelajs.co/api/v1/products/
 ```
 ```json
 {
@@ -87,7 +87,7 @@ You can create a new product by sending an object like the following to `/produc
 You can update a product exists by sending an object like the following and adding the `id` as a parameter: `/products/1`
 
 ```bash
-[PUT] http://api.escuelajs.co/api/v1/products/1
+[PUT] https://api.escuelajs.co/api/v1/products/1
 ```
 ```json
 {
@@ -102,7 +102,7 @@ You can update a product exists by sending an object like the following and addi
 You can delete a product exists by adding the `id` as a parameter: `/products/1`
 
 ```bash
-[DELETE] http://api.escuelajs.co/api/v1/products/1
+[DELETE] https://api.escuelajs.co/api/v1/products/1
 ```
 
 ## Pagination
@@ -114,7 +114,7 @@ Offset-based pagination is often used where the list of items is of a fixed and 
 To fetch the first page of entries in a collection, the API needs to be called with the `offset` set to 0 and with the `limit` the products that you want in the response.
 
 ```bash
-[GET] http://api.escuelajs.co/api/v1/products?offset=0&limit=10
+[GET] https://api.escuelajs.co/api/v1/products?offset=0&limit=10
 ```
 ```json
 [
@@ -141,7 +141,7 @@ To fetch the first page of entries in a collection, the API needs to be called w
 To fetch the **next page** of entries, the API needs to be called with an offset parameter that equals the sum of the previous offset value and limit returned to the previous result, `previous_offset + previous_limit`.
 
 ```bash
-[GET] http://api.escuelajs.co/api/v1/products?offset=10&limit=10
+[GET] https://api.escuelajs.co/api/v1/products?offset=10&limit=10
 ```
 
 > Note that the offset should be increased by the previous limit and not by the size of the entries in the response array, as this may be less than the limit. Generally we advise using the value of the limit in the response object to increase the offset value.

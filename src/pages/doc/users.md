@@ -9,7 +9,7 @@ layout: ../../layouts/MainLayout.astro
 You can access the list of 3 users by using the `/users` endpoint.
 
 ```
-[GET] http://api.escuelajs.co/api/v1/users
+[GET] https://api.escuelajs.co/api/v1/users
 ```
 
 ```json
@@ -30,7 +30,7 @@ You can access the list of 3 users by using the `/users` endpoint.
 You can get a single user by adding the `id` as a parameter: `/users/{id}`
 
 ```bash
-[GET] http://api.escuelajs.co/api/v1/users/1
+[GET] https://api.escuelajs.co/api/v1/users/1
 ```
 
 ```json
@@ -48,7 +48,7 @@ You can get a single user by adding the `id` as a parameter: `/users/{id}`
 You can create a new user by sending an object like the following to `/users/`
 
 ```bash
-[POST] http://api.escuelajs.co/api/v1/users/
+[POST] https://api.escuelajs.co/api/v1/users/
 ```
 ```json
 {
@@ -65,7 +65,7 @@ You can create a new user by sending an object like the following to `/users/`
 You can update a user exists by sending an object like the following and adding the `id` as a parameter: `/users/{id}`
 
 ```bash
-[PUT] http://api.escuelajs.co/api/v1/users/1
+[PUT] https://api.escuelajs.co/api/v1/users/1
 ```
 ```json
 {
@@ -81,7 +81,7 @@ You can update a user exists by sending an object like the following and adding 
 You can verify if an email is already registered in the API.
 
 ```bash
-[POST] http://api.escuelajs.co/api/v1/users/is-available
+[POST] https://api.escuelajs.co/api/v1/users/is-available
 ```
 ```json
 {

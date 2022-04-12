@@ -6,7 +6,7 @@ const data = await fetch(API).then(r => r.json());
 <div class='prod-gallery'>
 	{data.map((item) => (
     <div>
-      <img width={WIDTH} height={HEIGHT} loading="lazy" src={item.images[0]} alt={item.title} />
+      <img loading="lazy" src={item.images[0]} alt={item.title} />
       <div>
         <h5>{item.title}</h5>
         <p>${item.price}</p>
@@ -17,14 +17,18 @@ const data = await fetch(API).then(r => r.json());
 
 <style>
 	.prod-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .prod-gallery img {
+    max-width: 100%;
   }
 
   @media screen and (min-width: 768px) {
     .prod-gallery {
+      display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-gap: 15px;
     }
   }
 </style>

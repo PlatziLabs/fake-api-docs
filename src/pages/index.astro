@@ -23,7 +23,7 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
       <h2>Get products</h2>
       <Markdown>
         ```
-        [GET] http://api.escuelajs.co/api/v1/products
+        [GET] https://api.escuelajs.co/api/v1/products
         ```
       </Markdown>
     </div>
@@ -36,7 +36,7 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
       <h2>Get categories</h2>
       <Markdown>
         ```
-        [GET] http://api.escuelajs.co/api/v1/categories
+        [GET] https://api.escuelajs.co/api/v1/categories
         ```
       </Markdown>
     </div>
@@ -49,7 +49,7 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
       <h2>Get users</h2>
       <Markdown>
         ```
-        [GET] http://api.escuelajs.co/api/v1/users
+        [GET] https://api.escuelajs.co/api/v1/users
         ```
       </Markdown>
     </div>
@@ -120,8 +120,14 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
     margin: 1rem;
     margin-block-end: 0;
   }
+  pre {
+    font-size: 8px;
+  }
 
   @media screen and (min-width: 768px) {
+    pre {
+      font-size: 14px;
+    }
     img {
       width: 45%;
       margin-block-end: 1rem;
