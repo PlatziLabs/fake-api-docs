@@ -9,7 +9,7 @@ layout: ../../layouts/MainLayout.astro
 You can upload file by using the `/files/upload` endpoint but in header the `Content-Type` should be `multipart/form-data`.
 
 ```
-[GET] http://api.escuelajs.co/api/v1/files/upload
+[GET] https://api.escuelajs.co/api/v1/files/upload
 ```
 
 ```json
@@ -33,5 +33,5 @@ The response is like this:
 You can get a single file by adding the `fileName` as a parameter: `/files/{fileName}`
 
 ```bash
-[GET] http://api.escuelajs.co/api/v1/files/f3a5.png
+[GET] https://api.escuelajs.co/api/v1/files/f3a5.png
 ```

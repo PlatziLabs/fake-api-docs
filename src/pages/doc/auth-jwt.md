@@ -9,7 +9,7 @@ layout: ../../layouts/MainLayout.astro
 You can do login by sending an object like the following to `/auth/login/`
 
 ```
-[POST] http://api.escuelajs.co/api/v1/auth/login
+[POST] https://api.escuelajs.co/api/v1/auth/login
 ```
 
 ```json
@@ -33,7 +33,7 @@ The response is a JWT Token, like this:
 You can get the profile the current user with session if in the headers include the `Authorization` key with the value `Bearer {your token}` to `/auth/profile`
 
 ```bash
-[GET] http://api.escuelajs.co/api/v1/auth/profile
+[GET] https://api.escuelajs.co/api/v1/auth/profile
 ```
 
 ```json

@@ -9,7 +9,7 @@ layout: ../../layouts/MainLayout.astro
 You can access the list of 5 categories by using the `/categories` endpoint.
 
 ```
-[GET] http://api.escuelajs.co/api/v1/categories
+[GET] https://api.escuelajs.co/api/v1/categories
 ```
 
 ```json
@@ -28,7 +28,7 @@ You can access the list of 5 categories by using the `/categories` endpoint.
 You can get a single category by adding the `id` as a parameter: `/categories/{id}`
 
 ```bash
-[GET] http://api.escuelajs.co/api/v1/categories/1
+[GET] https://api.escuelajs.co/api/v1/categories/1
 ```
 
 ```json
@@ -44,7 +44,7 @@ You can get a single category by adding the `id` as a parameter: `/categories/{i
 You can create a new category by sending an object like the following to `/categories/`
 
 ```bash
-[POST] http://api.escuelajs.co/api/v1/categories/
+[POST] https://api.escuelajs.co/api/v1/categories/
 ```
 ```json
 {
@@ -60,7 +60,7 @@ You can create a new category by sending an object like the following to `/categ
 You can update a category exists by sending an object like the following and adding the `id` as a parameter: `/categories/{id}`
 
 ```bash
-[PUT] http://api.escuelajs.co/api/v1/categories/1
+[PUT] https://api.escuelajs.co/api/v1/categories/1
 ```
 ```json
 {
@@ -75,7 +75,7 @@ You can update a category exists by sending an object like the following and add
 You can delete a category exists by adding the `id` as a parameter: `/categories/{id}`
 
 ```bash
-[DELETE] http://api.escuelajs.co/api/v1/categories/1
+[DELETE] https://api.escuelajs.co/api/v1/categories/1
 ```
 
 ## Get all products by category
@@ -83,7 +83,7 @@ You can delete a category exists by adding the `id` as a parameter: `/categories
 You can get the products by category adding the `categoryID` as a parameter to `/categories/{categoryID}/products`
 
 ```
-[GET] http://api.escuelajs.co/api/v1/categories/1/products
+[GET] https://api.escuelajs.co/api/v1/categories/1/products
 ```
 
 ```json
