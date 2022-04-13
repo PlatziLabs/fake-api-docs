@@ -4,7 +4,7 @@ description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 
-Platzi FakeStoreApi can be used with any type of shopping project that needs products, carts, and users in JSON format. You can use examples below to check how FakeStoreApi works and feel free to enjoy it in your awesome projects!
+Platzi Fake Store API can be used with any type project that needs products, users, categories, authentication and users in JSON format. You can use this API for prototyping e-commerce and learning about how to connect to an API with the best practices.
 
 This API include feature like:
 
