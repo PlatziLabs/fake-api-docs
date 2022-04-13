@@ -1,6 +1,6 @@
 ---
 import { WIDTH_MEDIUM, HEIGHT_MEDIUM } from '../../constants/images.constants.ts'
-const API = 'https://api.escuelajs.co/api/v1/users';
+const API = 'https://api.escuelajs.co/api/v1/users?limit=3';
 const data = await fetch(API).then(r => r.json());
 ---
 <div class='users-gallery'>
