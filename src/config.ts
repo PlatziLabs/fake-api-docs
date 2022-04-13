@@ -40,6 +40,7 @@ export const SIDEBAR = {
 		{ text: 'Auth JWT', link: 'doc/auth-jwt' },
 		{ text: 'Files', link: 'doc/files' },
     { text: 'Resources', header: true },
+		{ text: 'Postman', link: 'doc/postman' },
 		{ text: 'Insomnia', link: 'doc/insomnia' },
 		{ text: 'Swagger Docs', link: 'https://api.escuelajs.co/docs', external: true },
 	]
