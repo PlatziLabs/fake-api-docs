@@ -5,6 +5,7 @@ import Header from '../components/Header/Header.astro';
 import PageContent from '../components/PageContent/PageContent.astro';
 import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar/RightSidebar.astro';
+import ProductHuntBtn from '../components/ProductHuntBtn.astro';
 import * as CONFIG from '../config';
 
 const { content = {} } = Astro.props;
@@ -118,5 +119,6 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && CONFIG.GITHUB_EDIT_URL + current
 				<RightSidebar {content} {githubEditUrl} />
 			</aside>
 		</main>
+    <ProductHuntBtn />
 	</body>
 </html>

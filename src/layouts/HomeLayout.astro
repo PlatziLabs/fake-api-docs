@@ -1,6 +1,7 @@
 ---
 import HeadCommon from '../components/HeadCommon.astro';
 import HeadSEO from '../components/HeadSEO.astro';
+import ProductHuntBtn from '../components/ProductHuntBtn.astro';
 import * as CONFIG from '../config';
 
 const { content = {} } = Astro.props;
@@ -17,6 +18,18 @@ const { content = {} } = Astro.props;
         max-width: 1000px;
         width: 100%;
 			}
+      .productHunt {
+        display: block;
+        margin: 10px auto;
+      }
+      @media (min-width: 72em) {
+        .productHunt {
+          position: fixed;
+          bottom: 5px;
+          right: 5px;
+          margin: 0;
+        }
+      }
 		</style>
 	</head>
 
@@ -24,5 +37,6 @@ const { content = {} } = Astro.props;
 		<main class="layout">
       <slot />
 		</main>
+    <ProductHuntBtn />
 	</body>
 </html>

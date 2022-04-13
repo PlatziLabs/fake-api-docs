@@ -50,7 +50,6 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 	.logo {
 		display: flex;
 		overflow: hidden;
-		width: 30px;
 		font-size: 2rem;
 		flex-shrink: 0;
 		font-weight: 600;
@@ -59,6 +58,10 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 		gap: 0.25em;
 		z-index: -1;
 	}
+
+  .logo {
+    display: none;
+  }
 
 	.logo a {
 		padding: 0.5em 0.25em;
@@ -98,6 +101,9 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 			position: static;
 			padding: 2rem 0rem;
 		}
+    .logo {
+      display: flex;
+    }
 		.logo {
 			width: auto;
 			margin: 0;
