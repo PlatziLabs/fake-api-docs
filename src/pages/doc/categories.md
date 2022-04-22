@@ -46,6 +46,7 @@ You can create a new category by sending an object like the following to `/categ
 ```bash
 [POST] https://api.escuelajs.co/api/v1/categories/
 ```
+
 ```json
 {
   "name": "New Category",
@@ -62,9 +63,10 @@ You can update a category exists by sending an object like the following and add
 ```bash
 [PUT] https://api.escuelajs.co/api/v1/categories/1
 ```
+
 ```json
 {
-  "name": "Change name",
+  "name": "Change name"
 }
 ```
 
@@ -103,15 +105,15 @@ You can get the products by category adding the `categoryID` as a parameter to `
       "https://placeimg.com/640/480/any?r=0.9300320592588625",
       "https://placeimg.com/640/480/any?r=0.8807778235430017"
     ]
-  },
+  }
   // ...
 ]
 ```
 
 ## Schema Category
 
-| Attribute  | Type | Description |
-| --- | --- | --- |
-| id   | number | The id of the category. |
-| name   | string | Name of the product. |
-| image   | string | The string with URL to a image |
+| Attribute | Type   | Description                    |
+| --------- | ------ | ------------------------------ |
+| id        | number | The id of the category.        |
+| name      | string | Name of the category.          |
+| image     | string | The string with URL to a image |
