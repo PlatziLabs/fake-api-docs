@@ -29,7 +29,7 @@ You can access the list of 200 products by using the `/products` endpoint.
       "https://placeimg.com/640/480/any?r=0.9300320592588625",
       "https://placeimg.com/640/480/any?r=0.8807778235430017"
     ]
-  },
+  }
   // ...
 ]
 ```
@@ -68,15 +68,14 @@ You can create a new product by sending an object like the following to `/produc
 ```bash
 [POST] https://api.escuelajs.co/api/v1/products/
 ```
+
 ```json
 {
   "title": "New Product",
   "price": 10,
   "description": "A description",
   "categoryId": 1,
-  "images": [
-    "https://placeimg.com/640/480/any"
-  ]
+  "images": ["https://placeimg.com/640/480/any"]
 }
 ```
 
@@ -89,14 +88,16 @@ You can update a product exists by sending an object like the following and addi
 ```bash
 [PUT] https://api.escuelajs.co/api/v1/products/1
 ```
+
 ```json
 {
   "title": "Change title",
-  "price": 100,
+  "price": 100
 }
 ```
 
 > Note that it is not necessary to send all product attributes, just send the attributes that want to update.
+
 ## Delete a product
 
 You can delete a product exists by adding the `id` as a parameter: `/products/1`
@@ -116,6 +117,7 @@ To fetch the first page of entries in a collection, the API needs to be called w
 ```bash
 [GET] https://api.escuelajs.co/api/v1/products?offset=0&limit=10
 ```
+
 ```json
 [
   {
@@ -133,7 +135,7 @@ To fetch the first page of entries in a collection, the API needs to be called w
       "https://placeimg.com/640/480/any?r=0.9300320592588625",
       "https://placeimg.com/640/480/any?r=0.8807778235430017"
     ]
-  },
+  }
   // ... and 9 items more
 ]
 ```
@@ -153,27 +155,28 @@ For example, for a pagination with 10 items per page, it looks like this:
 [GET] http://api.escuelajs.co/api/v1/products?offset=10&limit=10
 [GET] http://api.escuelajs.co/api/v1/products?offset=20&limit=10
 ``` -->
-| Request  |  Description |
-| --- | --- |
-| /products?**offset=0&limit=10**   | Return the first 10 products. |
-| /products?**offset=10&limit=10**   | Return products from 10 to 20 |
-| /products?**offset=20&limit=10**   | Return products from 20 to 30 |
+
+| Request                          | Description                   |
+| -------------------------------- | ----------------------------- |
+| /products?**offset=0&limit=10**  | Return the first 10 products. |
+| /products?**offset=10&limit=10** | Return products from 10 to 20 |
+| /products?**offset=20&limit=10** | Return products from 20 to 30 |
 
 Or for a pagination with 20 items per page, it looks like this:
 
-
-| Request  |  Description |
-| --- | --- |
-| /products?**offset=0&limit=20**   | Return the first 20 products. |
-| /products?**offset=20&limit=20**   | Return products from 20 to 40 |
-| /products?**offset=40&limit=20**   | Return products from 40 to 60 |
+| Request                          | Description                   |
+| -------------------------------- | ----------------------------- |
+| /products?**offset=0&limit=20**  | Return the first 20 products. |
+| /products?**offset=20&limit=20** | Return products from 20 to 40 |
+| /products?**offset=40&limit=20** | Return products from 40 to 60 |
 
 ## Schema Product
 
-| Attribute  | Type | Description |
-| --- | --- | --- |
-| id   | number | The id of the product. |
-| price   | number | Price the product. |
-| description   | string | Description the product. |
-| category   | number | Object of category. |
-| images   | string[] | List of images like URLs. |
+| Attribute   | Type     | Description               |
+| ----------- | -------- | ------------------------- |
+| id          | number   | The id of the product.    |
+| title       | string   | The name of the product.  |
+| price       | number   | Price the product.        |
+| description | string   | Description the product.  |
+| category    | number   | Object of category.       |
+| images      | string[] | List of images like URLs. |
