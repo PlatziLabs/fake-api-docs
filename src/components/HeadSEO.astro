@@ -7,7 +7,7 @@ export interface Props {
 }
 const { content = {}, canonicalURL } = Astro.props;
 const formattedContentTitle = content.title ? `${content.title} - ${SITE.title}` : SITE.title;
-const canonicalImageSrc = 'https://static.platzi.com/media/meta_tags/og/OG-platzi-Dic-2019.png';
+const canonicalImageSrc = '/cover.png';
 const imageAlt = content?.image?.alt ?? OPEN_GRAPH.image.alt;
 ---
 
