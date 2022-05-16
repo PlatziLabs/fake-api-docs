@@ -8,6 +8,7 @@ export interface Props {
 const { content = {}, canonicalURL } = Astro.props;
 const formattedContentTitle = content.title ? `${content.title} - ${SITE.title}` : SITE.title;
 const canonicalImageSrc = '/cover.png';
+const openGraphTwitter = '/cover-tw.png';
 const imageAlt = content?.image?.alt ?? OPEN_GRAPH.image.alt;
 ---
 
@@ -29,7 +30,7 @@ const imageAlt = content?.image?.alt ?? OPEN_GRAPH.image.alt;
 <meta name="twitter:site" content={OPEN_GRAPH.twitter} />
 <meta name="twitter:title" content={formattedContentTitle} />
 <meta name="twitter:description" content={content.description ? content.description : SITE.description} />
-<meta name="twitter:image" content={canonicalImageSrc} />
+<meta name="twitter:image" content={openGraphTwitter} />
 <meta name="twitter:image:alt" content={imageAlt} />
 
 <!--
