@@ -58,7 +58,7 @@ You can create a new user by sending an object like the following to `/users/`
 }
 ```
 
-> Note that the password is will not encrypted.
+> Note that the password is not encrypted.
 
 ## Update a user
 
