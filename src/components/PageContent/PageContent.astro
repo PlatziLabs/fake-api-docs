@@ -1,23 +1,26 @@
 ---
+import type { Frontmatter } from '../../config';
+import type { MarkdownHeading } from 'astro';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
-import TableOfContents from '../RightSidebar/TableOfContents.tsx';
+import TableOfContents from '../RightSidebar/TableOfContents';
 
-const { content, githubEditUrl } = Astro.props;
-const title = content.title;
-const headers = content.astro.headers;
+type Props = {
+	frontmatter: Frontmatter;
+	headings: MarkdownHeading[];
+};
+
+const { frontmatter, headings } = Astro.props as Props;
+const title = frontmatter.title;
 ---
 
 <article id="article" class="content">
 	<section class="main-section">
 		<h1 class="content-title" id="overview">{title}</h1>
 		<nav class="block sm:hidden">
-			<TableOfContents client:media="(max-width: 50em)" {headers} />
+			<TableOfContents client:media="(max-width: 50em)" headings={headings} />
 		</nav>
 		<slot />
 	</section>
-	<nav class="block sm:hidden">
-		<MoreMenu editHref={githubEditUrl} />
-	</nav>
 </article>
 
 <style>

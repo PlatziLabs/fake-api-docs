@@ -1,16 +1,20 @@
 ---
 title: Users
 description: Endpoints for Users
-layout: ../../layouts/MainLayout.astro
+layout: ../../../layouts/MainLayout.astro
 ---
 
 ## Get all users
 
 You can access the list of 3 users by using the `/users` endpoint.
 
-```
+Request:
+
+```sh
 [GET] https://api.escuelajs.co/api/v1/users
 ```
+
+Response:
 
 ```json
 [
@@ -19,7 +23,8 @@ You can access the list of 3 users by using the `/users` endpoint.
     "email": "john@mail.com",
     "password": "changeme",
     "name": "Jhon",
-    "role": "customer"
+    "role": "customer",
+    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
   },
   // ...
 ]
@@ -29,9 +34,13 @@ You can access the list of 3 users by using the `/users` endpoint.
 
 You can get a single user by adding the `id` as a parameter: `/users/{id}`
 
-```bash
+Request:
+
+```sh
 [GET] https://api.escuelajs.co/api/v1/users/1
 ```
+
+Response:
 
 ```json
 {
@@ -39,7 +48,8 @@ You can get a single user by adding the `id` as a parameter: `/users/{id}`
   "email": "john@mail.com",
   "password": "changeme",
   "name": "Jhon",
-  "role": "customer"
+  "role": "customer",
+  "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
 }
 ```
 
@@ -47,14 +57,29 @@ You can get a single user by adding the `id` as a parameter: `/users/{id}`
 
 You can create a new user by sending an object like the following to `/users/`
 
-```bash
+Request:
+
+```sh
 [POST] https://api.escuelajs.co/api/v1/users/
-```
-```json
+# Body
 {
   "name": "Nicolas",
   "email": "nico@gmail.com",
-  "password": "123"
+  "password": "1234",
+  "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+}
+```
+
+Response:
+
+```json
+{
+	"email": "nico@gmail.com",
+	"password": "1234",
+	"name": "Nicolas",
+	"avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+	"role": "customer",
+	"id": 24
 }
 ```
 
@@ -64,13 +89,27 @@ You can create a new user by sending an object like the following to `/users/`
 
 You can update a user exists by sending an object like the following and adding the `id` as a parameter: `/users/{id}`
 
-```bash
+Request:
+
+```sh
 [PUT] https://api.escuelajs.co/api/v1/users/1
-```
-```json
+# Body
 {
   "email": "john@mail.com",
   "name": "Change name",
+}
+```
+
+Response:
+
+```json
+{
+	"id": 4,
+	"email": "john@mail.com",
+	"password": "1234",
+	"name": "Change name",
+	"role": "admin",
+	"avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
 }
 ```
 
@@ -80,16 +119,25 @@ You can update a user exists by sending an object like the following and adding 
 
 You can verify if an email is already registered in the API.
 
-```bash
+Request:
+
+```sh
 [POST] https://api.escuelajs.co/api/v1/users/is-available
-```
-```json
+# Body
 {
   "email": "john@mail.com"
 }
 ```
 
-This feature is so useful for doing feature like show a message in a form and verify the email before create and user, for example:
+Response:
+
+```json
+{
+	"isAvailable": false
+}
+```
+
+This feature is so useful for features like showing a message in a form and verifying the email before creating a user. For example:
 
 ![Example](https://i.imgur.com/Igy8mhu.png)
 
@@ -102,3 +150,4 @@ This feature is so useful for doing feature like show a message in a form and ve
 | role | string | The role of the user is customer or admin |
 | email | string | The email of the user. |
 | password | string | The password of the user. |
+| avatar | string | The string with URL to a image  |

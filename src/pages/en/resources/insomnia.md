@@ -1,12 +1,12 @@
 ---
 title: Insomnia
 description: File for Insomnia
-layout: ../../layouts/MainLayout.astro
+layout: ../../../layouts/MainLayout.astro
 ---
 
 Insomnia is a great app to organize your requests to reflect your workflow or your API data-model. Group and order your API requests to your heart's desire.
 
-![Example](/insomnia.png)
+![Example](https://i.imgur.com/7OHqBWW.png)
 
 <p>
 Download the

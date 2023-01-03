@@ -1,5 +1,5 @@
 ---
-import { Markdown } from 'astro/components';
+import { Code } from 'astro/components';
 import HomeLayout from '../layouts/HomeLayout.astro';
 import PlatziLogo from '../components/Header/PlatziLogo.astro';
 import ProductsAPI from '../components/PreviewAPI/ProductsAPI.astro';
@@ -14,18 +14,14 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
         <h2>Platzi Fake Store API</h2>
       </div>
       <p>Fake store rest API for your e-commerce or shopping website prototype.</p>
-      <a class="btn" href="/doc/introduction">View Docs</a>
+      <a class="btn" href="/en/rest/introduction">View Docs</a>
     </div>
     <img loading="lazy" src="/fake-api.png" alt="Platzi Fake Api">
   </section>
   <section class="example">
     <div class="title">
       <h2>Get products</h2>
-      <Markdown>
-        ```
-        [GET] https://api.escuelajs.co/api/v1/products
-        ```
-      </Markdown>
+      <Code code="[GET] https://api.escuelajs.co/api/v1/products" lang="sh" />
     </div>
     <div class="APIContainer">
       <ProductsAPI />
@@ -34,11 +30,7 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
   <section class="example">
     <div class="title">
       <h2>Get categories</h2>
-      <Markdown>
-        ```
-        [GET] https://api.escuelajs.co/api/v1/categories
-        ```
-      </Markdown>
+      <Code code="[GET] https://api.escuelajs.co/api/v1/categories" lang="sh" />
     </div>
     <div class="APIContainer">
       <CategoriesAPI />
@@ -47,11 +39,7 @@ import UsersAPI from '../components/PreviewAPI/UsersAPI.astro';
   <section class="example">
     <div class="title">
       <h2>Get users</h2>
-      <Markdown>
-        ```
-        [GET] https://api.escuelajs.co/api/v1/users
-        ```
-      </Markdown>
+      <Code code="[GET] https://api.escuelajs.co/api/v1/users" lang="sh" />
     </div>
     <div class="APIContainer">
       <UsersAPI />

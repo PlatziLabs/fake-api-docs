@@ -1,0 +1,14 @@
+---
+title: GraphQL Playground
+description: GraphQL Playground
+layout: ../../../layouts/MainLayout.astro
+---
+
+GraphQL Playground is a graphical, interactive, in-browser GraphQL IDE, created by Prisma and based on GraphiQL.
+
+![Playground](https://i.imgur.com/EYiwhLi.png)
+
+<p>
+Go to
+<a href="https://api.escuelajs.co/graphql" target="_self">GraphQL Playground.</a>
+</p>

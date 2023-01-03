@@ -1,18 +1,18 @@
 ---
 title: Files
 description: Endpoints for Categories
-layout: ../../layouts/MainLayout.astro
+layout: ../../../layouts/MainLayout.astro
 ---
 
 ## Upload File
 
 You can upload file by using the `/files/upload` endpoint but in header the `Content-Type` should be `multipart/form-data`.
 
-```
-[POST] https://api.escuelajs.co/api/v1/files/upload
-```
+Request:
 
-```json
+```sh
+[POST] https://api.escuelajs.co/api/v1/files/upload
+# Body
 {
   "file": "<Binary File>"
 }
@@ -32,6 +32,6 @@ The response is like this:
 
 You can get a single file by adding the `fileName` as a parameter: `/files/{fileName}`
 
-```bash
+```sh
 [GET] https://api.escuelajs.co/api/v1/files/f3a5.png
 ```

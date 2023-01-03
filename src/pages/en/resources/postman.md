@@ -1,12 +1,12 @@
 ---
 title: Postman
 description: File for Postman
-layout: ../../layouts/MainLayout.astro
+layout: ../../../layouts/MainLayout.astro
 ---
 
 Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
 
-![Example](/postman.png)
+![Example](https://i.imgur.com/Ts6ZwOI.png)
 
 <p>
 Download the

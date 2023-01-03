@@ -1,26 +1,34 @@
 ---
+import type { MarkdownHeading } from 'astro';
 import HeadCommon from '../components/HeadCommon.astro';
 import HeadSEO from '../components/HeadSEO.astro';
 import Header from '../components/Header/Header.astro';
 import PageContent from '../components/PageContent/PageContent.astro';
 import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar/RightSidebar.astro';
-import ProductHuntBtn from '../components/ProductHuntBtn.astro';
 import * as CONFIG from '../config';
 
-const { content = {} } = Astro.props;
-const currentPage = Astro.request.url.pathname;
+type Props = {
+	frontmatter: CONFIG.Frontmatter;
+	headings: MarkdownHeading[];
+};
+
+const { frontmatter, headings } = Astro.props as Props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const currentPage = Astro.url.pathname;
 const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
-const githubEditUrl = CONFIG.GITHUB_EDIT_URL && CONFIG.GITHUB_EDIT_URL + currentFile;
+const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 ---
 
-<html dir={content.dir ?? 'ltr'} lang={content.lang ?? 'en-us'} class="initial">
+<html dir={frontmatter.dir ?? 'ltr'} lang={frontmatter.lang ?? 'en-us'} class="initial">
 	<head>
 
 		<HeadCommon />
-		<HeadSEO {content} canonicalURL={Astro.request.canonicalURL} />
-		<title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>
-		<style>
+		<HeadSEO frontmatter={frontmatter} canonicalUrl={canonicalURL} />
+		<title>
+			{frontmatter.title ? `${frontmatter.title} 🚀 ${CONFIG.SITE.title}` : CONFIG.SITE.title}
+		</title>
+    <style>
 			body {
 				width: 100%;
 				display: grid;
@@ -59,6 +67,7 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && CONFIG.GITHUB_EDIT_URL + current
 				display: flex;
 				flex-direction: column;
 				height: 100%;
+        overflow-x: scroll;
 			}
 			#grid-right {
 				display: none;
@@ -81,9 +90,25 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && CONFIG.GITHUB_EDIT_URL + current
 				#grid-left {
 					display: flex;
 					padding-left: 2rem;
-					position: sticky;
 					grid-column: 1;
+          position: fixed;
+          top: var(--theme-navbar-height);
+          bottom: 0;
+          width: var(--theme-left-sidebar-width);
+          background-color: var(--theme-bg);
+          z-index: 10;
 				}
+        #grid-right {
+					grid-column: 3;
+					display: flex;
+          padding-top: var(--theme-navbar-height);
+				}
+        #grid-main {
+          padding-top: var(--theme-navbar-height);
+          padding-right: 1.5rem;
+          padding-bottom: 1.5rem;
+          overflow-x: hidden;
+        }
 			}
 
 			@media (min-width: 72em) {
@@ -99,26 +124,31 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && CONFIG.GITHUB_EDIT_URL + current
 				#grid-right {
 					grid-column: 3;
 					display: flex;
+          padding-top: var(--theme-navbar-height);
 				}
+        #grid-main {
+          padding-top: var(--theme-navbar-height);
+          padding-right: 1.5rem;
+          overflow-x: hidden;
+        }
 			}
 		</style>
 	</head>
 
 	<body>
-		<Header {currentPage} />
+		<Header currentPage={currentPage} />
 		<main class="layout">
 			<aside id="grid-left" class="grid-sidebar" title="Site Navigation">
-				<LeftSidebar {currentPage} />
+				<LeftSidebar currentPage={currentPage} />
 			</aside>
 			<div id="grid-main">
-				<PageContent {content} {githubEditUrl}>
+				<PageContent frontmatter={frontmatter} headings={headings}>
 					<slot />
 				</PageContent>
 			</div>
 			<aside id="grid-right" class="grid-sidebar" title="Table of Contents">
-				<RightSidebar {content} {githubEditUrl} />
+				<RightSidebar headings={headings} />
 			</aside>
 		</main>
-    <ProductHuntBtn />
 	</body>
 </html>

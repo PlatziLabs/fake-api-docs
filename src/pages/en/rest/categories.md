@@ -1,23 +1,27 @@
 ---
 title: Categories
 description: Endpoints for Categories
-layout: ../../layouts/MainLayout.astro
+layout: ../../../layouts/MainLayout.astro
 ---
 
 ## Get all categories
 
 You can access the list of 5 categories by using the `/categories` endpoint.
 
+Request:
+
 ```
 [GET] https://api.escuelajs.co/api/v1/categories
 ```
+
+Response:
 
 ```json
 [
   {
     "id": 1,
     "name": "Clothes",
-    "image": "https://placeimg.com/640/480/any"
+    "image": "https://api.lorem.space/image/fashion?w=640&h=480&r=4278"
   }
   // ...
 ]
@@ -25,17 +29,21 @@ You can access the list of 5 categories by using the `/categories` endpoint.
 
 ## Get a single category
 
-You can get a single category by adding the `id` as a parameter: `/categories/{id}`
+You can get a single category by adding the `id` as a parameter: `/categories/<id>`
 
-```bash
+Request:
+
+```sh
 [GET] https://api.escuelajs.co/api/v1/categories/1
 ```
+
+Response:
 
 ```json
 {
   "id": 1,
   "name": "Clothes",
-  "image": "https://placeimg.com/640/480/any"
+  "image": "https://api.lorem.space/image/fashion?w=640&h=480&r=4278"
 }
 ```
 
@@ -43,14 +51,24 @@ You can get a single category by adding the `id` as a parameter: `/categories/{i
 
 You can create a new category by sending an object like the following to `/categories/`
 
-```bash
+Request:
+
+```sh
 [POST] https://api.escuelajs.co/api/v1/categories/
+# Body
+{
+  "name": "New Category",
+  "image": "https://placeimg.com/640/480/any"
+}
 ```
+
+Response:
 
 ```json
 {
   "name": "New Category",
-  "image": "https://placeimg.com/640/480/any"
+  "image": "https://placeimg.com/640/480/any",
+  "id": 6
 }
 ```
 
@@ -58,15 +76,25 @@ You can create a new category by sending an object like the following to `/categ
 
 ## Update a category
 
-You can update a category exists by sending an object like the following and adding the `id` as a parameter: `/categories/{id}`
+You can update a category exists by sending an object like the following and adding the `id` as a parameter: `/categories/<id>`
 
-```bash
-[PUT] https://api.escuelajs.co/api/v1/categories/1
+Request:
+
+```sh
+[PUT] https://api.escuelajs.co/api/v1/categories/3
+# Body
+{
+  "name": "Change title"
+}
 ```
+
+Response:
 
 ```json
 {
-  "name": "Change name"
+  "id": 3,
+  "name": "Change title",
+  "image": "https://api.lorem.space/image/furniture?w=640&h=480&r=7358"
 }
 ```
 
@@ -76,17 +104,29 @@ You can update a category exists by sending an object like the following and add
 
 You can delete a category exists by adding the `id` as a parameter: `/categories/{id}`
 
-```bash
+Request:
+
+```sh
 [DELETE] https://api.escuelajs.co/api/v1/categories/1
+```
+
+Response:
+
+```json
+true
 ```
 
 ## Get all products by category
 
 You can get the products by category adding the `categoryID` as a parameter to `/categories/{categoryID}/products`
 
+Request:
+
 ```
 [GET] https://api.escuelajs.co/api/v1/categories/1/products
 ```
+
+Response:
 
 ```json
 [

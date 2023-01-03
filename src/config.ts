@@ -1,6 +1,6 @@
 export const SITE = {
 	title: 'Platzi Fake Store API',
-	description: 'platzi Fake Store API',
+	description: 'Platzi Fake Store API',
 	defaultLanguage: 'en_US',
 };
 
@@ -12,9 +12,22 @@ export const OPEN_GRAPH = {
 	twitter: 'astrodotbuild',
 };
 
-export const KNOWN_LANGUAGES = {
-	English: 'doc',
+// This is the type of the frontmatter you put in the docs markdown files.
+export type Frontmatter = {
+	title: string;
+	description: string;
+	layout: string;
+	image?: { src: string; alt: string };
+	dir?: 'ltr' | 'rtl';
+	ogLocale?: string;
+	lang?: string;
 };
+
+export const KNOWN_LANGUAGES = {
+	English: 'en',
+	// Spanish: 'es',
+} as const;
+export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
 // Uncomment this to add an "Edit this page" button to every page of documentation.
 export const GITHUB_EDIT_URL = `https://github.com/platzilabs/fake-api-site/blob/master/`;
@@ -30,18 +43,36 @@ export const GITHUB_EDIT_URL = `https://github.com/platzilabs/fake-api-site/blob
 //   apiKey: 'XXXXXXXXXX',
 // }
 
+export type Sidebar = Record<
+	typeof KNOWN_LANGUAGE_CODES[number],
+	Record<string, { text: string; link: string }[]>
+>;
 export const SIDEBAR = {
-	doc: [
-		{ text: 'Documentation', header: true },
-		{ text: 'Introduction', link: 'doc/introduction' },
-		{ text: 'Products', link: 'doc/products' },
-		{ text: 'Categories', link: 'doc/categories' },
-		{ text: 'Users', link: 'doc/users' },
-		{ text: 'Auth JWT', link: 'doc/auth-jwt' },
-		{ text: 'Files', link: 'doc/files' },
-    { text: 'Resources', header: true },
-		{ text: 'Postman', link: 'doc/postman' },
-		{ text: 'Insomnia', link: 'doc/insomnia' },
-		{ text: 'Swagger Docs', link: 'https://api.escuelajs.co/docs', external: true },
-	]
+	en: {
+    'Rest API': [
+      { text: 'Introduction', link: 'en/rest/introduction' },
+      { text: 'Products', link: 'en/rest/products' },
+      { text: 'Filter Products', link: 'en/rest/products-filter' },
+      { text: 'Categories', link: 'en/rest/categories' },
+      { text: 'Users', link: 'en/rest/users' },
+      { text: 'Auth JWT', link: 'en/rest/auth-jwt' },
+      { text: 'Files', link: 'en/rest/files' },
+      { text: 'Swagger Docs', link: 'en/rest/swagger' },
+    ],
+    'GraphQL': [
+      { text: 'Introduction', link: 'en/gql/introduction' },
+      { text: 'Products', link: 'en/gql/products' },
+      { text: 'Filter Products', link: 'en/gql/products-filter' },
+      { text: 'Categories', link: 'en/gql/categories' },
+      { text: 'Users', link: 'en/gql/users' },
+      { text: 'Auth JWT', link: 'en/gql/auth-jwt' },
+      // { text: 'Files', link: 'en/gql/files' },
+      { text: 'Playground', link: 'en/gql/playground' },
+    ],
+    'Resources': [
+      { text: 'Postman', link: 'en/resources/postman' },
+      { text: 'Insomnia', link: 'en/resources/insomnia' },
+      // { text: 'Figma', link: 'en/resources/figma' },
+    ]
+  }
 };

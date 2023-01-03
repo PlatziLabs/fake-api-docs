@@ -1,16 +1,18 @@
 ---
 import HeadCommon from '../components/HeadCommon.astro';
 import HeadSEO from '../components/HeadSEO.astro';
-import ProductHuntBtn from '../components/ProductHuntBtn.astro';
 import * as CONFIG from '../config';
 
-const { content = {} } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
-<html dir={content.dir ?? 'ltr'} lang={content.lang ?? 'en-us'} class="initial">
+<html dir='ltr' lang='en-us' class="initial">
 	<head>
 		<HeadCommon />
-		<HeadSEO {content} canonicalURL={Astro.request.canonicalURL} />
-		<title>{content.title ? `${content.title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>
+		<!-- <HeadSEO frontmatter={frontmatter} canonicalUrl={canonicalURL} /> -->
+		<title>
+			{CONFIG.SITE.title}
+		</title>
 		<style>
 			.layout {
 				display: block;
@@ -37,6 +39,5 @@ const { content = {} } = Astro.props;
 		<main class="layout">
       <slot />
 		</main>
-    <ProductHuntBtn />
 	</body>
 </html>
