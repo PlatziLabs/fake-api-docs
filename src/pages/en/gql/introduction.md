@@ -17,7 +17,7 @@ This API includes features like:
 - ✅ **Postman and Insomnia Files**
 - ✅ **And much more**
 
-## GraqhQL
+## GraphQL
 
 We have a GraphQL endpoint that you can use to query the data you need. You can use the [GraphQL Playground](https://api.escuelajs.co/graphql) to test your queries.
 
