@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/docs",
-      "destination": "/en/rest/"
+      "destination": "/en/rest/introduction"
     },
     {
       "source": "/docs/:path*",
