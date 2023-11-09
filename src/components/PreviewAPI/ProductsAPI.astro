@@ -1,34 +1,15 @@
 ---
-import { WIDTH, HEIGHT } from '../../constants/images.constants.ts'
+import type { Product } from '@models/index';
 const API = 'https://api.escuelajs.co/api/v1/products?offset=0&limit=10';
-const data = await fetch(API).then(r => r.json());
+const response = await fetch(API);
+const data = await response.json() as Product[];
 ---
-<div class='prod-gallery'>
+<div class='grid grid-5 not-content'>
 	{data.map((item) => (
-    <div>
+    <article>
       <img loading="lazy" src={item.images[0]} alt={item.title} />
-      <div>
-        <h5>{item.title}</h5>
-        <p>${item.price}</p>
-      </div>
-    </div>
+      <p>${item.price}</p>
+      <h4>{item.title}</h4>
+    </article>
   ))}
 </div>
-
-<style>
-	.prod-gallery {
-    display: flex;
-    flex-direction: column;
-  }
-  .prod-gallery img {
-    max-width: 100%;
-  }
-
-  @media screen and (min-width: 768px) {
-    .prod-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      grid-gap: 15px;
-    }
-  }
-</style>

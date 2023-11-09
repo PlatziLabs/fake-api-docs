@@ -1,49 +1,20 @@
 {
-  "name": "platzi-fake-api",
+  "name": "radiant-ring",
+  "type": "module",
   "version": "0.0.1",
-  "license": "MIT",
-  "private": true,
-  "keywords": [
-    "JavaScript"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/platzi/fake-api-site.git"
-  },
-  "homepage": "https://fakeapi.platzi.com",
-  "author": "Platzi <team@platzi.com>",
-  "collaborators": [
-    "nicobytes",
-    "gndx"
-  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "check": "astro check && tsc",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.8.0",
-    "preact": "^10.7.3",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "@astrojs/react": "^1.2.2",
-    "@astrojs/preact": "^1.2.0",
-    "@algolia/client-search": "^4.13.1",
-    "@docsearch/css": "^3.1.0",
-    "@docsearch/react": "^3.1.0",
-    "@types/react": "^17.0.45",
-    "@types/node": "^18.0.0",
-    "@types/react-dom": "^18.0.0"
-  },
-  "devDependencies": {
-    "html-escaper": "^3.0.3"
-  },
-  "description": "Fake store rest API for your e-commerce or shopping website prototype.",
-  "bugs": {
-    "url": "https://github.com/platzi/fake-api-site/issues"
-  },
-  "main": "src/pages/index.astro"
+    "@astrojs/check": "^0.2.1",
+    "@astrojs/starlight": "^0.11.2",
+    "@fontsource/ibm-plex-serif": "^5.0.8",
+    "astro": "^3.2.3",
+    "sharp": "^0.32.5",
+    "typescript": "^5.2.2"
+  }
 }

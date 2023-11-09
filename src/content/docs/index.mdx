@@ -1,0 +1,78 @@
+---
+title: Platzi Fake Store API
+description: Fake store rest API for your e-commerce or shopping website prototype.
+template: splash
+hero:
+  tagline: Your API for your e-commerce or shopping website prototype.
+  image:
+    file: ../../assets/fake-api.png
+  actions:
+    - text: View Docs
+      link: /en/about/introduction/
+      icon: right-arrow
+      variant: primary
+---
+
+import { Code } from 'astro/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import CategoriesAPI from './src/components/PreviewAPI/CategoriesAPI.astro';
+import ProductsAPI from './src/components/PreviewAPI/ProductsAPI.astro';
+import UsersAPI from './src/components/PreviewAPI/UsersAPI.astro';
+
+<section class="section">
+  <h3>Get products</h3>
+  <Code code="[GET] https://api.escuelajs.co/api/v1/products" lang="sh" />
+  <ProductsAPI />
+</section>
+
+<section class="section">
+  <div class="title">
+    <h3>Get categories</h3>
+    <Code code="[GET] https://api.escuelajs.co/api/v1/categories" lang="sh" />
+  </div>
+  <div class="APIContainer">
+    <CategoriesAPI />
+  </div>
+</section>
+
+<section class="section">
+  <div class="title">
+    <h3>Get users</h3>
+    <Code code="[GET] https://api.escuelajs.co/api/v1/users" lang="sh" />
+  </div>
+  <div class="APIContainer">
+    <UsersAPI />
+  </div>
+</section>
+
+## Features
+
+<CardGrid stagger>
+	<Card title="All CRUD Operations" icon="pencil">
+		Leverage our API to seamlessly perform all CRUD (Create, Read, Update, and Delete) operations without any limitations.
+	</Card>
+	<Card title="Pagination" icon="document">
+		Supports pagination through the 'limit' and 'offset' methods, allowing for features like infinite scroll.
+	</Card>
+	<Card title="Auth with JWT" icon="setting">
+		Utilize JWT for access and refresh tokens, and securely test endpoints with this authentication method.
+	</Card>
+	<Card title="Filters" icon="magnifier">
+		Filter products by price, title, and category, enabling the creation of sophisticated UIs based on these criteria.
+	</Card>
+  <Card title="Rest API" icon="star">
+		The API employs the REST API architecture, the most widely adopted structure in the industry.
+	</Card>
+  <Card title="GraphQL" icon="rocket">
+		The API supports GraphQL, a query language for APIs, and offers a runtime to execute those queries using your existing data.
+	</Card>
+  <Card title="Files" icon="add-document">
+		You can upload files using `multipart/form-data`.
+	</Card>
+  <Card title="Postam and Insomia" icon="random">
+		We provide files for both Postman and Insomnia, allowing you to easily test each endpoint.
+	</Card>
+  <Card title="AI Images" icon="sun">
+		Images are crafted using AI to ensure your projects looks so professionalism.
+	</Card>
+</CardGrid>
