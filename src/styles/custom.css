@@ -8,6 +8,9 @@
 .grid article img {
 	max-width: 100%;
 }
+.grid a img {
+	max-width: 100%;
+}
 
 @media screen and (min-width: 768px) {
 	.grid {
@@ -17,6 +20,10 @@
 	.grid-5 {
 		grid-template-columns: repeat(5, 1fr);
 	}
+	.grid-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.grid a,
 	.grid article {
 		margin: 0;
 	}

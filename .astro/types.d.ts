@@ -199,13 +199,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"en/about/showcase.md": {
-	id: "en/about/showcase.md";
+"en/about/showcase.mdx": {
+	id: "en/about/showcase.mdx";
   slug: "en/about/showcase";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "en/gql/auth-jwt.md": {
 	id: "en/gql/auth-jwt.md";
   slug: "en/gql/auth-jwt";

@@ -73,7 +73,7 @@ export default defineConfig({
           label: "About",
           items: [
             { label: "Introduction", link: "en/about/introduction/" },
-            // { label: "Showcase", link: "en/about/showcase/" },
+            { label: "Showcase", link: "en/about/showcase/" },
             // { label: "Open Source", link: "en/about/open-source/" },
           ],
         },

@@ -1,0 +1,24 @@
+---
+title: Showcase
+description: Showcase
+---
+
+:::tip[Add your own!]
+Have you built a project using this API?
+Open a PR adding a link to this page!
+:::
+
+## Sites
+
+Platzi Fake Store API is used by users to create amazing e-commerce projects. These are some of the sites around the web:
+
+import { SHOWCASES } from '../../../../constants/showcase.ts';
+
+<div class='grid grid-3 not-content'>
+	{SHOWCASES.map((item) => (
+    <a href={item.link} target="_blank">
+      <img loading="lazy"src={item.image} alt={item.title} />
+      <p>{item.title}</p>
+    </a>
+  ))}
+</div>
