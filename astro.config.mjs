@@ -1,6 +1,8 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
+const site = "https://fakeapi.platzi.com/";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://fakeapi.platzi.com/",
@@ -10,11 +12,48 @@ export default defineConfig({
       favicon: "/favicon.png",
       head: [
         {
+          tag: "meta",
+          attrs: { property: "og:image", content: site + "cover.png?v=1" },
+        },
+        {
+          tag: "meta",
+          attrs: {
+            property: "twitter:image",
+            content: site + "cover-tw.png?v=1",
+          },
+        },
+        {
+          tag: "link",
+          attrs: { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        },
+        {
+          tag: "link",
+          attrs: {
+            rel: "preconnect",
+            href: "https://fonts.gstatic.com",
+            crossorigin: true,
+          },
+        },
+        {
           tag: "link",
           attrs: {
             rel: "stylesheet",
             href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&display=swap",
           },
+        },
+        {
+          tag: "script",
+          attrs: {
+            src: "https://www.googletagmanager.com/gtag/js?id=G-TS6JSW87G9",
+            async: true,
+          },
+        },
+        {
+          tag: "script",
+          content: `window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-TS6JSW87G9');`,
         },
       ],
       logo: {
