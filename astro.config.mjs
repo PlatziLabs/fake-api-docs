@@ -13,13 +13,13 @@ export default defineConfig({
       head: [
         {
           tag: "meta",
-          attrs: { property: "og:image", content: site + "cover.png?v=1" },
+          attrs: { property: "og:image", content: "/cover.png?v=1" },
         },
         {
           tag: "meta",
           attrs: {
             property: "twitter:image",
-            content: site + "cover-tw.png?v=1",
+            content: "/cover-tw.png?v=1",
           },
         },
         {
