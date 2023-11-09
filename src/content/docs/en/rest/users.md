@@ -82,7 +82,7 @@ Response:
 }
 ```
 
-> Note that the password is will not encrypted.
+> Note that the password is not encrypted.
 
 ## Update a user
 
