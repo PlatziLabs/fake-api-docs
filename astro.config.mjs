@@ -1,8 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
-const site = "https://fakeapi.platzi.com/";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://fakeapi.platzi.com/",
