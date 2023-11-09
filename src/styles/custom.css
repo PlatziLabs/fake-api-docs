@@ -1,0 +1,23 @@
+:root {
+  --sl-font: 'IBM Plex Sans', sans-serif;
+}
+.grid {
+	display: flex;
+	flex-direction: column;
+}
+.grid article img {
+	max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.grid {
+		display: grid;
+		grid-gap: 1rem;
+	}
+	.grid-5 {
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.grid article {
+		margin: 0;
+	}
+}

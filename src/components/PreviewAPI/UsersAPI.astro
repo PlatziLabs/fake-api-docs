@@ -1,32 +1,15 @@
 ---
-import { WIDTH_MEDIUM, HEIGHT_MEDIUM } from '../../constants/images.constants.ts'
+import type { User } from '@models/index';
 const API = 'https://api.escuelajs.co/api/v1/users?limit=3';
-const data = await fetch(API).then(r => r.json());
+const response = await fetch(API);
+const data = await response.json() as User[];
 ---
-<div class='users-gallery'>
+<div class='grid grid-5 not-content'>
 	{data.map((item) => (
-    <div>
+    <article>
       <img loading="lazy" src={item.avatar} alt="user" />
-      <div class='title'>
-        <h5>{item.email}</h5>
-      </div>
-    </div>
+      <p>{item.email}</p>
+    </article>
   ))}
 </div>
 
-<style>
-	.users-gallery {
-    display: flex;
-    flex-direction: column;
-  }
-  .users-gallery img {
-    max-width: 100%;
-  }
-  @media screen and (min-width: 768px) {
-    .users-gallery {
-      display: grid;
-      grid-template-columns:  repeat(auto-fill, minmax(300px, 1fr));
-      grid-gap: 15px;
-    }
-  }
-</style>
