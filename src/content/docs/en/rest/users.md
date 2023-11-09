@@ -23,7 +23,7 @@ Response:
     "password": "changeme",
     "name": "Jhon",
     "role": "customer",
-    "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+    "avatar": "https://i.imgur.com/LDOO4Qs.jpg",
   },
   // ...
 ]
@@ -48,7 +48,7 @@ Response:
   "password": "changeme",
   "name": "Jhon",
   "role": "customer",
-  "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+  "avatar": "https://i.imgur.com/LDOO4Qs.jpg",
 }
 ```
 
@@ -65,7 +65,7 @@ Request:
   "name": "Nicolas",
   "email": "nico@gmail.com",
   "password": "1234",
-  "avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+  "avatar": "https://picsum.photos/800",
 }
 ```
 
@@ -76,7 +76,7 @@ Response:
 	"email": "nico@gmail.com",
 	"password": "1234",
 	"name": "Nicolas",
-	"avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+	"avatar": "https://i.imgur.com/yhW6Yw1.jpg",
 	"role": "customer",
 	"id": 24
 }
@@ -108,7 +108,7 @@ Response:
 	"password": "1234",
 	"name": "Change name",
 	"role": "admin",
-	"avatar": "https://api.lorem.space/image/face?w=640&h=480&r=867",
+	"avatar": "https://i.imgur.com/yhW6Yw1.jpg",
 }
 ```
 
