@@ -1,9 +1,11 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
+const site = "https://fakeapi.platzi.com";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fakeapi.platzi.com/",
+  site,
   integrations: [
     starlight({
       title: "Platzi Fake Store API",
@@ -11,13 +13,13 @@ export default defineConfig({
       head: [
         {
           tag: "meta",
-          attrs: { property: "og:image", content: "/cover.png?v=1" },
+          attrs: { property: "og:image", content: `${site}/cover.png?v=1` },
         },
         {
           tag: "meta",
           attrs: {
             property: "twitter:image",
-            content: "/cover-tw.png?v=1",
+            content: `${site}/cover-tw.png?v=1`,
           },
         },
         {
