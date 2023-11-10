@@ -17,11 +17,26 @@ export const SHOWCASES = [
   {
     title: "no-clipped",
     image: "https://i.imgur.com/XkgENBe.png",
-    link: "https://no-clipped.vercel.app",
+    link: "https://no-clipped.vercel.app/category/2",
   },
   {
     title: "Yard Store",
     image: "https://i.imgur.com/CKtE0oF.png",
-    link: "https://angular-yardstore.netlify.app",
+    link: "https://angular-yardstore.netlify.app/website/category/4",
+  },
+  {
+    title: "NextJS PWA Dashboard",
+    image: "https://i.imgur.com/5dDTWNz.png",
+    link: "https://next-js-git-pwa-misael-gc.vercel.app/dashboard/",
+  },
+  {
+    title: "Yard Sale Store",
+    image: "https://i.imgur.com/9BM1VKm.png",
+    link: "https://yard-sale-store.vercel.app/",
+  },
+  {
+    title: "Admin Panel",
+    image: "https://i.imgur.com/LgXIbhc.png",
+    link: "https://next-admin-panel-ionuser13.vercel.app/dashboard",
   }
 ];
