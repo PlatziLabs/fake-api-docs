@@ -16,12 +16,12 @@ export const SHOWCASES = [
   },
   {
     title: "no-clipped",
-    image: "https://i.imgur.com/Elt7vKX.png",
+    image: "https://i.imgur.com/XkgENBe.png",
     link: "https://no-clipped.vercel.app",
   },
   {
     title: "Yard Store",
-    image: "https://i.imgur.com/06iIcHY.png",
+    image: "https://i.imgur.com/CKtE0oF.png",
     link: "https://angular-yardstore.netlify.app",
   }
 ];
