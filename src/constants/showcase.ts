@@ -14,4 +14,14 @@ export const SHOWCASES = [
     image: "https://i.imgur.com/frYbBxG.png",
     link: "https://store-peach-ten.vercel.app",
   },
+  {
+    title: "no-clipped",
+    image: "https://i.imgur.com/Elt7vKX.png",
+    link: "https://no-clipped.vercel.app",
+  },
+  {
+    title: "Yard Store",
+    image: "https://i.imgur.com/06iIcHY.png",
+    link: "https://angular-yardstore.netlify.app",
+  }
 ];
