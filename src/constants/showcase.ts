@@ -43,5 +43,10 @@ export const SHOWCASES = [
     title: "Admin Panel",
     image: "https://i.imgur.com/LgXIbhc.png",
     link: "https://next-admin-panel-ionuser13.vercel.app/dashboard",
-  }
+  },
+  {
+    title: "Emirs Shop",
+    image: "https://i.imgur.com/aCtfpcm.png",
+    link: "https://emirs-shop.vercel.app",
+  },
 ];
