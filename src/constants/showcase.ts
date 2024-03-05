@@ -49,4 +49,9 @@ export const SHOWCASES = [
     image: "https://i.imgur.com/LgXIbhc.png",
     link: "https://next-admin-panel-ionuser13.vercel.app/dashboard",
   },
+  {
+    title: "Trending Shop",
+    image: "https://i.imgur.com/lN216wP.png",
+    link: "https://trending-shop.netlify.app/",
+  },
 ];
