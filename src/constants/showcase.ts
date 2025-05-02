@@ -2,7 +2,7 @@ export const SHOWCASES = [
   {
     title: "React SPA Shop",
     image: "https://i.imgur.com/HTEvA9R.png",
-    link: "https://react-shop-siza.vercel.app/products",
+    link: "https://react-shop-front-siza.liara.run/products",
   },
   {
     title: "ViteJS Ecommerce",
