@@ -59,4 +59,9 @@ export const SHOWCASES = [
     image: "https://i.imgur.com/7lT5qDt.png",
     link: "https://calis-store.vercel.app/",
   },
+  {
+    title: "PlatziStore (SwiftUI Sample App)",
+    image: "https://i.imgur.com/gI67Xuj",
+    link: "https://github.com/bsimmons01/PlatziStoreREST",
+  },
 ];
